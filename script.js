@@ -53,7 +53,7 @@ function PlayRound(machine,player)
             if (machine=="Rock") output="Win";
             else output="Lose";
         }
-    else return ("You "+output);
+    return ("You "+output);
 }
 function PlayMatch()
 {   
@@ -62,9 +62,17 @@ function PlayMatch()
     {
         let result_round=PlayRound(getmachinechoice(),getplayerchoice());
         console.log(result_round);
-        if (result_round == "You Win")player_score++;
-        else if (result_round=="You Lose")machine_score++;
-        else i--;
+        if (result_round == "You Win")
+        {   player_score++;
+            console.log(result_round);
+        }
+        else if (result_round=="You Lose")
+        {
+            machine_score++;
+            console.log(result_round);
+
+        }
+        else {i--;console.log("Retry");}
     }
     if (player_score>machine_score)console.log("You Won the match");
     else if (player_score<machine_score)console.log("You lost the match"); 
