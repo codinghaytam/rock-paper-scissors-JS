@@ -1,6 +1,6 @@
 function getmachinechoice()
 {
-    let a=Math.round(Math.random()*2);
+    let input=Math.round(Math.random()*2);
     switch (a){
         case 0:
             return "Rock";
