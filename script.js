@@ -34,4 +34,3 @@ function getplayerchoice()
             return "ERROR";
     }
 }
-console.log(getplayerchoice());
