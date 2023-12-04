@@ -1,7 +1,7 @@
 function getmachinechoice()
 {
     let input=Math.round(Math.random()*2);
-    switch (a){
+    switch (input){
         case 0:
             return "Rock";
             break;
@@ -33,4 +33,26 @@ function getplayerchoice()
         default :
             return "ERROR";
     }
+}
+function PlayRound(machine,player)
+{
+    let output;
+    if(player===machine) output="TIE";
+    else if (player=="Scissors")
+        {
+            if (machine=="Paper") output="Win";
+            else output="Lose";
+        }
+    else if (player=="Rock")
+        {
+            if (machine=="Scissors") output="Win";
+            else output="Lose";
+        }
+    else if (player=="Paper")
+        {
+            if (machine=="Rock") output="Win";
+            else output="Lose";
+        }
+    if (output=="Tie")return "It's a Tie";
+    else return ("You "+output);
 }
