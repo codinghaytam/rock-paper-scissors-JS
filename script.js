@@ -53,6 +53,21 @@ function PlayRound(machine,player)
             if (machine=="Rock") output="Win";
             else output="Lose";
         }
-    if (output=="Tie")return "It's a Tie";
     else return ("You "+output);
 }
+function PlayMatch()
+{   
+    let player_score=0,machine_score=0
+    for (i=0;i<5;i++)
+    {
+        let result_round=PlayRound(getmachinechoice(),getplayerchoice());
+        console.log(result_round);
+        if (result_round == "You Win")player_score++;
+        else if (result_round=="You Lose")machine_score++;
+        else i--;
+    }
+    if (player_score>machine_score)console.log("You Won the match");
+    else if (player_score<machine_score)console.log("You lost the match"); 
+    else console.log("Its a Tie"); 
+}
+PlayMatch();
