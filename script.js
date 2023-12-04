@@ -15,3 +15,23 @@ function getmachinechoice()
             return "ERROR";
     }
 }
+function getplayerchoice()
+{
+    let input= prompt("what is your choice {'Rock','Paper','Scissors'}");
+    if(input===null)input="";
+    switch (input.toLowerCase())
+    {
+        case "rock":
+            return "Rock";
+            break;
+        case "paper":
+            return "Paper";
+            break;
+        case "scissors":
+            return "Scissors";
+            break;
+        default :
+            return "ERROR";
+    }
+}
+console.log(getplayerchoice());
