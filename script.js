@@ -61,7 +61,6 @@ function PlayMatch()
     for (i=0;i<5;i++)
     {
         let result_round=PlayRound(getmachinechoice(),getplayerchoice());
-        console.log(result_round);
         if (result_round == "You Win")
         {   player_score++;
             console.log(result_round);
