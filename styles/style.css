@@ -1,6 +1,78 @@
+@font-face {
+    font-family: "Pixelify Sans";
+    src: url("./../fonts/pixel/PixelifySans-Regular.ttf");
+    src: url("./../fonts/pixel/PixelifySans-Regular.ttf") format('embedded-opentype'),
+    url("./../fonts/pixel/PixelifySans-Regular.ttf") format('woff2'),
+    url("./../fonts/pixel/PixelifySans-Regular.ttf") format('woff'),
+    url("./../fonts/pixel/PixelifySans-Regular.ttf") format('truetype');
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101010;
+}
 ul button img{
-    width:100px ;
+    width:90px;
 }
 .machine img{
-    width:200px;
+    width:60px;
+    margin:10px;
+}
+.machine{
+    display: flex;
+    border-style: solid;
+    border-color:rgb(61, 61, 61);
+    border-width: 2px;
+    border-radius: 10px;
+    width:500px;
+    justify-content: center;
+    background-color: #1a1919;
+}
+ul{
+    margin:0px;
+    display:flex;
+    padding:0px;
+    border-style: solid;
+    border-color:rgb(61, 61, 61);
+    border-width: 2px;
+    border-radius: 10px;
+    width:400px;
+    justify-content:space-around;
+    background-color: #1a1919;
+
+}
+ul button,.screen div{
+    border-style: solid;
+    border-color:rgb(61, 61, 61);
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #1a1919;
+    margin:10px;
+}
+.screen{
+    display :flex;
+    flex-direction:column;
+    align-items: center;
+    border-style: solid;
+    border-color:rgb(61, 61, 61);
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #0c0c0c;
+    width: 500px;
+    height:250px;
+    margin:10px;
+    
+}
+.screen div{
+    width:90px;
+    height: 90px;
+}
+.screen p{
+    font-family:"Pixelify Sans";
+    font-size:35px;
+    margin:0px;
+    color:aliceblue;
+    font-weight:300;
+    text-shadow: white;
 }
