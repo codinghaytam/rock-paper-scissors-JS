@@ -77,3 +77,18 @@ function PlayMatch()
     else if (player_score<machine_score)console.log("You lost the match"); 
     else console.log("Its a Tie"); 
 }
+const player_controles=Array.from(document.querySelectorAll("ul > button"));
+for(i = 0;i < 3;i++)
+{
+    player_controles[i].addEventListener("mouseenter",(e)=>{
+        e.target.style.background="#666666";
+    }
+
+    );
+    player_controles[i].addEventListener("mouseleave",(e)=>{
+        e.target.style.background="#1a1919";
+    }
+    
+    );
+
+}
