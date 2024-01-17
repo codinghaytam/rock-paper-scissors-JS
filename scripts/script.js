@@ -85,6 +85,7 @@ const player_display_input = document.querySelector(".player_output");
 const machine_display_input = document.querySelector(".machine_output");
 const image_list = player_controles.map((x)=> x.src);
 const value_list = player_controles.map((x)=> x.alt);
+const result_display = document.querySelector(".counter");
 for(i = 0;i < 4;i++)
 { 
     controles[i].addEventListener("mouseenter",(e)=>{
@@ -105,6 +106,9 @@ let result;
 let game_stat = false;
 controles[3].addEventListener("click",function(){
     game_stat = true;
+    player_display_input.firstElementChild.src = "";            
+    machine_display_input.firstElementChild.src = "";
+    result_display="";
 
 }
 );
@@ -118,7 +122,7 @@ for(i = 0;i < 3;i++)
             machine_input = getmachinechoice();
             machine_display_input.firstElementChild.src = image_list[value_list.indexOf(machine_input)];
             result = PlayRound(machine_input,player_input);
-            console.log(result);
+            result_display.textContent = result;
             game_stat = false;
         }
     }
