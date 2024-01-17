@@ -12,7 +12,7 @@ body{
     align-items: center;
     background-color: #101010;
 }
-ul button img{
+ul img{
     width:90px;
     background-color:initial;
 }
@@ -43,7 +43,7 @@ ul{
     background-color: #1a1919;
 
 }
-ul button,.screen div{
+ul img,.screen div{
     border-style: solid;
     border-color:rgb(61, 61, 61);
     border-width: 2px;
