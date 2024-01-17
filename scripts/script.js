@@ -108,7 +108,7 @@ controles[3].addEventListener("click",function(){
     game_stat = true;
     player_display_input.firstElementChild.src = "";            
     machine_display_input.firstElementChild.src = "";
-    result_display="";
+    result_display.textContent="";
 
 }
 );
