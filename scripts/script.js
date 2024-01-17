@@ -97,14 +97,24 @@ for(i = 0;i < 4;i++)
 let player_input;
 let machine_input;
 let result;
+let game_stat = false;
+controles[3].addEventListener("click",function(){
+    game_stat = true;
 
+}
+);
 for(i = 0;i < 3;i++)
 {
     player_controles[i].addEventListener("click",function(e){
-        player_input = e.target.alt;
-        machine_input = getmachinechoice();
-        result = PlayRound(machine_input,player_input);
-        console.log(result);
+        if(game_stat)
+        {
+            player_input = e.target.alt;
+            machine_input = getmachinechoice();
+            result = PlayRound(machine_input,player_input);
+            console.log(result);
+            game_stat = false;
+        }
     }
     );
 }
+
