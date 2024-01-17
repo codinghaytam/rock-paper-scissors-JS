@@ -1,3 +1,4 @@
+
 function getmachinechoice()
 {
     let input=Math.round(Math.random()*2);
@@ -80,6 +81,10 @@ function PlayMatch()
 
 const controles=Array.from(document.querySelectorAll("ul > img")).concat(document.querySelector("div > button"));
 const player_controles = controles.slice(0,3);
+const player_display_input = document.querySelector(".player_output");
+const machine_display_input = document.querySelector(".machine_output");
+const image_list = player_controles.map((x)=> x.src);
+const value_list = player_controles.map((x)=> x.alt);
 for(i = 0;i < 4;i++)
 { 
     controles[i].addEventListener("mouseenter",(e)=>{
@@ -109,7 +114,9 @@ for(i = 0;i < 3;i++)
         if(game_stat)
         {
             player_input = e.target.alt;
+            player_display_input.firstElementChild.src = e.target.src;            
             machine_input = getmachinechoice();
+            machine_display_input.firstElementChild.src = image_list[value_list.indexOf(machine_input)];
             result = PlayRound(machine_input,player_input);
             console.log(result);
             game_stat = false;

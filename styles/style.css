@@ -56,19 +56,20 @@ ul img,.screen div{
     display :flex;
     flex-direction:column;
     align-items: center;
+    justify-content: center;
     border-style: solid;
     border-color:rgb(61, 61, 61);
     border-width: 2px;
     border-radius: 10px;
     background-color: #0c0c0c;
     width: 500px;
-    height:250px;
+    height:300px;
     margin:10px;
     
 }
 .screen div{
-    width:90px;
-    height: 90px;
+    width:100px;
+    height: 100px;
 }
 .screen p{
     font-family:"Pixelify Sans";
@@ -90,4 +91,15 @@ ul img,.screen div{
     color: aliceblue;
     font-family:"Pixelify Sans";
     align-self: center;
+}
+.player_output,.machine_output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.player_output img,.machine_output img{
+    width: 90px;
+    margin-top:10px;
+    
 }
