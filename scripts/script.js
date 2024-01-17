@@ -15,7 +15,7 @@ function getmachinechoice()
             return "ERROR";
     }
 }
-function getplayerchoice()
+function getplayerchoice(input)
 {
 
     if(input===null)input="";
@@ -77,7 +77,9 @@ function PlayMatch()
     else if (player_score<machine_score)console.log("You lost the match"); 
     else console.log("Its a Tie"); 
 }
+
 const controles=Array.from(document.querySelectorAll("ul > img")).concat(document.querySelector("div > button"));
+const player_controles = controles.slice(0,3);
 for(i = 0;i < 4;i++)
 { 
     controles[i].addEventListener("mouseenter",(e)=>{
@@ -91,4 +93,18 @@ for(i = 0;i < 4;i++)
 
     );
 
+}
+let player_input;
+let machine_input;
+let result;
+
+for(i = 0;i < 3;i++)
+{
+    player_controles[i].addEventListener("click",function(e){
+        player_input = e.target.alt;
+        machine_input = getmachinechoice();
+        result = PlayRound(machine_input,player_input);
+        console.log(result);
+    }
+    );
 }
